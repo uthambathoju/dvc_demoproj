@@ -6,20 +6,20 @@ stages:
     - src/load_data.py
     - data_given/train_SAHeart.csv
     outs:
-    - data/raw/SAHeart.csv
+    - data/raw/train_SAHeart.csv
   split_data:
     cmd: python src/split_data.py --config=params.yaml
     deps:
     - src/split_data.py
-    - data/raw/SAHeart.csv
+    - data/raw/train_SAHeart.csv
     outs:
     - data/processed/train_SAHeart.csv
-    - data/processed/test_SAHeart.csv 
+    - data/processed/test.csv 
   train_and_evaluate:
     cmd: [python src/train_and_evaluate.py --config=params.yaml, dvc plots show]
     deps:
     - data/processed/train_SAHeart.csv
-    - data/processed/test_SAHeart.csv 
+    - data/processed/test.csv 
     - src/train_and_evaluate.py
     metrics:
     - report/scores.json:

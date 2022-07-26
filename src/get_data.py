@@ -20,7 +20,7 @@ def get_data(config_path):
     print("******************check for version control**********************")
     print(df.count)
     print("******************check for version control*****************************************")
-    dvclive.log("# Records",df.shape[0])
+    #dvclive.log("# Records",df.shape[0])
     return df
 
 if __name__=="__main__":

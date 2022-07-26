@@ -1,11 +1,28 @@
 base:
-  project: DVC_Demoproj
-  random_state: 999
+  project: DVC_DemoProj
+  random_state: 789456
   target_col: Survived
+  solver: liblinear
+  
+
+data_source:
+  s3_source: data_given/train_SAHeart.csv
+
+
+load_data:
+  raw_dataset_csv: data/raw/train_SAHeart.csv
 
 split_data:
-  train_path: data/train.csv
-  test_path: data/test.csv
-  test_size: 0.25
+  train_path: data/processed/train_SAHeart.csv
+  test_path: data/processed/test.csv
+  test_size: 0.5
 
-model_dir: models
+model_dir: saved_models
+
+reports:
+  scores: report/scores.json
+  roc: report/roc.json
+  prc: report/prc.json
+  auc: report/auc.json
+
+test_size: 0.5

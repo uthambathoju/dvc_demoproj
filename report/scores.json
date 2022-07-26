@@ -1,0 +1,9 @@
+{
+    "Train Score": 80.3921568627451,
+    "Test Score": 77.59103641456583,
+    "ROC_AUC": 0.8526716572018586,
+    "Train Size": 357,
+    "Test Size": 357,
+    "Solver": "liblinear",
+    "Accuracy": 0.7759103641456583
+}
