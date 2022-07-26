@@ -1,0 +1,11 @@
+base:
+  project: DVC_Demoproj
+  random_state: 999
+  target_col: Survived
+
+split_data:
+  train_path: data/train.csv
+  test_path: data/test.csv
+  test_size: 0.25
+
+model_dir: models
